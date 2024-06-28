@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <title>Bild</title>
+</head>
+<body>
+    <section class="screenSecond">
+        <div class="menu">
+            <a class="" href="index.html" style="text-decoration: none; color: #151515">
+            <h1 class="notactiveMenu">HOME</h1>
+            </a>
+            <a class="" href="magazine.html" style="text-decoration: none; color: #151515">
+            <h1 class="activeMenu">MAGAZINE</h1>
+            </a>
+            <a class="" href="store.html" style="text-decoration: none; color: #151515">
+            <h1 class="notactiveMenu">STORE</h1>
+            </a>
+            <a class="" href="meetups.html" style="text-decoration: none; color: #151515">
+            <h1 class="notactiveMenu">MEETUPS</h1>
+            </a>
+        </div>
+
+        <div class="magazineHeader">
+            <p class="headerOne">ARCHITECTURE</p>
+            <div class="secondStrokeHead">
+                <p class="underheadText">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp This is an <br> urban planning magazine <br> that tells you how to work <br> properly with architectural <br> structures</p>
+                <p class="headerTwo">MAGAZINE</p>
+            </div>
+        </div>
+
+        <div class="pages">
+            <div class="page" id="page1">
+                <img src="images/10-11.png" style="width: 160%;" class="imagesPages">
+                <p id="scMiddle">[</p>
+                <p>Manual</p>
+                <p id="scMiddle">]</p></div>
+            <div class="page" id="page2">
+                <img src="images/12-13.png" style="width: 160%;" class="imagesPages">
+                <p id="scMiddle">[</p>
+                <p>Building</p>
+                <p id="scMiddle">]</p></div>
+            <div class="page" id="page3">
+                <img src="images/16-17.png" style="width: 160%;" class="imagesPages">
+                <p id="scMiddle">[</p>
+                <p>Building</p>
+                <p id="scMiddle">]</p></div>
+            <div class="page" id="page4">
+                <img src="images/18-19.png" style="width: 160%;" class="imagesPages">
+                <p id="scMiddle">[</p>
+                <p>Stretching</p>
+                <p id="scMiddle">]</p></div>
+            <div class="page" id="page5">
+                <img src="images/26-27.png" style="width: 160%;" class="imagesPages">
+                <p id="scMiddle">[</p>
+                <p>Stretching</p>
+                <p id="scMiddle">]</p></div>
+            <div class="page" id="page6">
+                <img src="images/28-29.png" style="width: 160%;" class="imagesPages">
+                <p id="scMiddle">[</p>
+                <p>Folding</p>
+                <p id="scMiddle">]</p></div>
+            <div class="page" id="page7">
+                <img src="images/34-35.png" style="width: 160%;" class="imagesPages">
+                <p id="scMiddle">[</p>
+                <p>Folding</p>
+                <p id="scMiddle">]</p></div>
+            <div class="page" id="page8">
+                <p id="scMiddle">[</p>
+                <p>Conclusion</p>
+                <p id="scMiddle">]</p></div>
+        </div>
+
+        <div class="buyingMagazine">
+            <p id="scBig">[</p>
+
+            <div class="buyingBody">
+                <div id="textPaid">MORE IN A PAID <br> SUBSCRIPTION</div>
+
+                <div class="buttonArrows">
+                    <div id="arrow1"><img src="images/arrowOneRight.svg" alt="" style="height: 0.6vw;"></div>
+                    <div id="buttonBuyMagazine">BUY FOR $10</div>
+                    <div id="arrow2"><img src="images/arrowOneLeft.svg" alt="" style="height: 0.6vw;"></div>
+                </div>
+            </div>
+            <p id="scBig">]</p>
+        </div>
+
+        <div class="footer">
+            <img src="images/arrowUp.svg" alt="" style="width: 0.7vw">
+            <div class="footerBody">
+                <p class="bild">BILD</p>
+                <div class="author">
+                    <p id="scMiddle">[</p>
+                    <p>MARINA USTINOVSKAYA B23DZ10</p>
+                    <p id="scMiddle">]</p>
+                </div>
+                <div class="social">
+                    <img src="images/ic_baseline-telegram.svg" alt="" id="telegram">
+                    <img src="images/mdi_youtube.svg" alt="" id="youtube">
+                    <img src="images/entypo-social_vk-with-circle.svg" alt="" id="vk">
+                </div>
+            </div>
+            <img src="images/arrowUp.svg" alt="" style="width: 0.7vw">
+        </div>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="images/arrowLeft.svg" alt="" style="height: 0.7vw; padding: 1.5vw;">
+        </div>
+    </section>
+
+
+    <script>
+        function showImage() {
+            document.getElementById("pagesImg").style.display = "block";
+        }
+    
+        function hideImage() {
+            document.getElementById("pagesImg").style.display = "none";
+        }
+
+    const observerOptions={
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5
+    };
+
+    const observerOut=(entries, observer)=>{
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                entry.target.classList.remove('show');
+            }
+        });
+    };
+
+    const observer=new IntersectionObserver(observerOut, observerOptions);
+    const pages=document.querySelectorAll('.page');
+    pages.forEach(page => {
+        observer.observe(page);
+
+        page.addEventListener('click', () => {
+            page.classList.toggle('show');
+        });
+    });
+
+    window.addEventListener('scroll', () => {
+        pages.forEach(page => {
+            if (!page.classList.contains('show')) {
+                return;
+            }
+
+            const blockImage = page.getBoundingClientRect();
+            const vwHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            if(blockImage.top >= 0 && blockImage.bottom <= vwHeight){
+            } else{
+                page.classList.remove('show');
+            }
+        });
+    });
+</script>
+</body>
+</html>

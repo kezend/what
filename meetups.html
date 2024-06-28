@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <title>Bild</title>
+</head>
+<body>
+    <section class="screenThird">
+        <div class="menu">
+            <a class="" href="index.html" style="text-decoration: none; color: #151515">
+            <h1 class="notactiveMenu">HOME</h1>
+            </a>
+            <a class="" href="magazine.html" style="text-decoration: none; color: #151515">
+            <h1 class="notactiveMenu">MAGAZINE</h1>
+            </a>
+            <a class="" href="store.html" style="text-decoration: none; color: #151515">
+            <h1 class="notactiveMenu">STORE</h1>
+            </a>
+            <a class="" href="meetups.html" style="text-decoration: none; color: #151515">
+            <h1 class="activeMenu">MEETUPS</h1>
+            </a>
+        </div>
+
+        <div class="meetupHeader">
+            <p class="headerOneMeet">MEETUPS</p>
+            <p class="headerTwoMeet">FROM BILD</p>
+        </div>
+
+        <div class="meetups">
+            <div class="firstMeet">
+                <div class="arr">
+                    <img src="images/bigArrowRight.svg" alt="" style="height: 0.9vw;">
+                </div>
+                <div class="fmText" onmouseover="showImage1()" onmouseout="hideImage1()" style="position: relative; width: 40vw;">
+                    <p style="font-size: 4vw;">BUILD CITY</p>
+                    <p style="font-size: 2vw;">27.07-28.07</p>
+                </div>
+            </div>
+            
+            <div class="posters1">
+                <img src="images/postersBuild.svg" alt="" id="hindImg1" style="width: 40%; position: absolute; margin-left: 20vw; margin-top: -22vw;">
+            </div>
+
+            <div class="secondMeet">
+                <div class="arr">
+                    <img src="images/bigArrowRight.svg" alt="" style="height: 0.9vw;">
+                </div>
+                <div class="smText" onmouseover="showImage2()" onmouseout="hideImage2()" style="position: relative; width: 40vw;">
+                    <p style="font-size: 4vw;">LESSONS</p>
+                    <p style="font-size: 2vw;">25.02-24.03</p>
+                </div>
+            </div>
+
+            <div class="posters2">
+                <img src="images/postersLesson.svg" alt="" id="hindImg2" style="width: 40%; position: absolute; margin-left: 20vw; margin-top: -22vw;">
+            </div>
+
+            <div class="thirdMeet">
+                <div class="arr">
+                    <img src="images/bigArrowRight.svg" alt="" style="height: 0.9vw;">
+                </div>
+                <div class="tmText" onmouseover="showImage3()" onmouseout="hideImage3()" style="position: relative; width: 40vw;">
+                    <p style="font-size: 4vw;">MASTER-CLASS</p>
+                    <p style="font-size: 2vw;">15.07 16:00</p>
+                </div>
+            </div>
+            
+            <div class="posters3">
+                <img src="images/posterMaster.svg" alt="" id="hindImg3" style="width: 40%; position: absolute; margin-left: 20vw; margin-top: -22vw;">
+            </div>
+        </div>
+        
+        <div class="buttonMoreDiv"><div id="buttonMore">MORE</div></div>
+
+        <div class="footer">
+            <img src="images/arrowUp.svg" alt="" style="width: 0.7vw">
+            <div class="footerBody">
+                <p class="bild">BILD</p>
+                <div class="author">
+                    <p id="scMiddle">[</p>
+                    <p>MARINA USTINOVSKAYA B23DZ10</p>
+                    <p id="scMiddle">]</p>
+                </div>
+                <div class="social">
+                    <img src="images/ic_baseline-telegram.svg" alt="" id="telegram">
+                    <img src="images/mdi_youtube.svg" alt="" id="youtube">
+                    <img src="images/entypo-social_vk-with-circle.svg" alt="" id="vk">
+                </div>
+            </div>
+            <img src="images/arrowUp.svg" alt="" style="width: 0.7vw">
+        </div>
+
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <img src="images/arrowLeft.svg" alt="" style="height: 0.7vw; padding: 1.5vw;">
+        </div>
+    </section>
+
+    <script>
+        function showImage1() {
+            document.getElementById("hindImg1").style.opacity = 100;
+        }
+    
+        function hideImage1() {
+            document.getElementById("hindImg1").style.opacity = 0;
+        }
+
+        function showImage2() {
+            document.getElementById("hindImg2").style.opacity = 100;
+        }
+    
+        function hideImage2() {
+            document.getElementById("hindImg2").style.opacity = 0;
+        }
+
+        function showImage3() {
+            document.getElementById("hindImg3").style.opacity = 100;
+        }
+    
+        function hideImage3() {
+            document.getElementById("hindImg3").style.opacity = 0;
+        }
+    </script>
+
+</body>
+</html>

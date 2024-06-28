@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./javascript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <title>Bild</title>
+</head>
+<body> <section class="firstScreen">
+  <div class="menu">
+    <a class="" href="index.html" style="text-decoration: none; color: #151515">
+    <h1 class="activeMenu">HOME</h1>
+    </a>
+    <a class="" href="magazine.html" style="text-decoration: none; color: #151515">
+    <h1 class="notactiveMenu">MAGAZINE</h1>
+    </a>
+    <a class="" href="store.html" style="text-decoration: none; color: #151515">
+    <h1 class="notactiveMenu">STORE</h1>
+    </a>
+    <a class="" href="meetups.html" style="text-decoration: none; color: #151515">
+    <h1 class="notactiveMenu">MEETUPS</h1>
+    </a>
+    </div>
+
+    
+      <div class="homeHeader">
+        <p class="headerHomeOne">THE BILD STUDIO</p>
+        <p class="headerHomeTwo">OPENING</p>
+        <p class="headerHomeThree">27.08-29.08</p>
+        <p class="underheadHomeText">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp A hardware store <br> is a retail establishment that <br> offers a wide range of products <br> used 
+        for home improvement, <br> maintenance, and construction <br> projects.</p>
+      </div>
+
+        <style>
+          body {
+            height: 100vw;
+            overflow-x: hidden;
+          }
+
+        .left, .right, .degreeLabel {
+          height: 0.2vw;
+          width: 100%;
+          background-color: #151515;
+          position: fixed;
+          top: 80%;
+          margin-top: 25vw;
+          animation: rotate 1s linear forwards;
+          animation-timeline: scroll(block nearest);
+        }
+
+        .left {
+          right: 50%;
+          transform-origin: top right;
+          transform: rotate(45deg);
+          --i: 1;
+        }
+        .right {
+          left: 50%;
+          transform-origin: top left;
+          transform: rotate(-45deg);
+          --i: -1;
+        }
+        .degreeLabel {
+          width: 10vw;
+          background-color: white;
+          border: #151515 solid 0.1vw;
+          padding: 2vw 1vw;
+          left: 0;
+          right: 0;
+          margin-left: auto; 
+          margin-right: auto; 
+          animation: labelMove 5s linear forwards;
+          animation-timeline: scroll(block nearest);
+          font-size: 1vw;
+        }
+
+        @keyframes rotate {
+          0% {
+            top: 42%;
+          }
+          100% {
+            rotate: calc(360deg * var(--i));
+            top: -38%;
+          }
+        }
+        @keyframes labelMove {
+          0% {
+            top: 40%;
+          }
+          100% {
+            top: -40%;
+          }
+        }
+        </style>
+
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="degreeLabel" style="
+          font-size: 1.8vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;">DEGREES</div>
+
+
+        <div class="place">
+          <p class="placeVideo">OUR PLACE</p>
+          <div class="video">
+            <video src="images/compose.mp4" autoplay muted loop class="video vid"></video>
+          </div>
+        </div>
+
+        <script>
+          let label = document.querySelector('.degreeLabel')
+        
+          document.addEventListener('scroll', () => {
+            let degreeNumber = document.querySelector('.right')
+            let compStyles = window.getComputedStyle(degreeNumber);
+           let angle = compStyles.getPropertyValue(
+            "rotate",
+          )
+          label.innerHTML = angle
+          })
+        </script>
+
+        <div class="footer">
+          <img src="images/arrowUp.svg" alt="" style="width: 0.7vw">
+          <div class="footerBody">
+              <p class="bild">BILD</p>
+              <div class="author">
+                  <p id="scMiddle">[</p>
+                  <p>MARINA USTINOVSKAYA B23DZ10</p>
+                  <p id="scMiddle">]</p>
+              </div>
+              <div class="social">
+                  <img src="images/ic_baseline-telegram.svg" alt="" id="telegram">
+                  <img src="images/mdi_youtube.svg" alt="" id="youtube">
+                  <img src="images/entypo-social_vk-with-circle.svg" alt="" id="vk">
+              </div>
+          </div>
+          <img src="images/arrowUp.svg" alt="" style="width: 0.7vw">
+      </div>
+
+      <div style="display: flex; justify-content: center; align-items: center;">
+          <img src="images/arrowLeft.svg" alt="" style="height: 0.7vw; padding: 1.5vw;">
+      </div>
+
+
+
+
+
+
+    </section>
+
+    
+    
+</body>
+</html>
