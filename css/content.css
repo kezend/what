@@ -1,0 +1,421 @@
+body{
+  background-color: #F6F6F6;
+  font-family: Helvetica;
+}
+
+.menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10vw;
+  margin-top: 1vw;
+  margin-bottom: 2vw;
+  position: fixed;
+  transform: translateX(15%);
+}
+
+.notactiveMenu{
+  font-size: 1.3vw;
+  background-color: #F6F6F6;
+  color: #151515;
+  border: 0.1vw solid #151515;
+  display: flex;
+  padding: 0.8vw 3vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.activeMenu{
+  font-size: 1.3vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding: 0.8vw 3vw;
+  color: #151515;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='2%2c 7' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.firstText{
+  font-size: 10vw;
+  font-weight: 300;
+}
+
+.screenSecond{
+  background-color: #F6F6F6;
+  color:#151515;
+}
+
+.magazineHeader{
+  margin-bottom: 5vw;
+  padding-top: 7vw;
+}
+
+.pages{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: -0.01vw;
+}
+
+#page1, #page2, #page3, #page4, #page5, #page6, #page7, #page8{
+  width: 40vw;
+  height: 33vw;
+  border: 0.1vw solid #151515;
+  text-transform: uppercase;
+  font-size: 2vw;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+
+.page{
+    width: 40vw;
+    height: 33vw;
+    border: 0.1vw solid #151515;
+    text-transform: uppercase;
+    font-size: 2vw;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3vw;
+    position: relative;
+    cursor: pointer;
+}
+
+  .imagesPages{
+  position: absolute;
+  margin: 0 auto;
+  top: -11%;
+  width: 150%;
+  height: 120%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  pointer-events: none;
+  z-index: 2;
+  }
+  .page.show img{
+    opacity: 1;
+  }
+
+.headerOne{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  font-size: 7vw;
+  font-weight: 300;
+  font-family: Helvetica;
+}
+
+.secondStrokeHead{
+  margin-left: 7vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+  gap: 7vw;
+}
+
+.headerTwo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 7vw;
+  font-weight: 300;
+  font-family: Helvetica;
+  background-color: #FFFFFF;
+  width: 40vw;
+  color: #151515;
+  font-style: light;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='30%2c 30' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.underheadText{
+  text-transform: uppercase;
+  font-size: 1vw;
+}
+
+.buyingMagazine{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 28vw;
+  margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.buyingBody{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8vw;
+}
+
+.buttonArrows{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8vw;
+}
+
+#scBig{
+  color: #FFFFFF;
+  -webkit-text-stroke: 0.1vw #191919;
+  font-size: 7vw;
+}
+
+#scMiddle{
+  color: #FFFFFF;
+  -webkit-text-stroke: 0.04vw #191919;
+}
+
+#buttonBuyMagazine{
+  height: 2.5vw;
+  width: 10vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw;
+  border: 0.1vw solid #151515;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+#textPaid{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5vw;
+}
+
+.footerBody{
+  padding: 0.3vw;
+  width: 90vw;
+  height: 17vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1vw;
+  background-color: #FFFFFF;
+  color: #151515;
+  font-style: light;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='30%2c 30' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.bild{
+  text-transform: uppercase;
+  font-size: 5vw;
+  font-weight: 300;
+}
+
+.author{
+  text-transform: uppercase;
+  font-size: 2vw;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12vw;
+}
+
+.social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 37vw;
+}
+
+#youtube{
+  width: 4.5vw;
+}
+
+#vk, #telegram{
+  width: 3.5vw;
+}
+
+.adress{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40vw;
+  flex-direction: row;
+  margin-bottom: 5vw;
+}
+
+.adressText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 1vw;
+  text-align: center;
+}
+
+.fullHeaderGif{
+  background-image: url('../images/gifBack.gif');
+  background-size: 100%;
+}
+
+.firstMeet, .secondMeet, .thirdMeet{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+.fmText, .smText, .tmText{
+  font-size: 1.2vw;
+}
+
+#hindImg1, #hindImg2, #hindImg3{
+  opacity: 0;
+}
+
+.meetups{
+  margin-bottom: 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 5vw;
+}
+
+.headerTwoMeet{
+  display: flex;
+  justify-content: center;
+  padding-right: 17vw;
+  align-items: center;
+  font-size: 7vw;
+  font-weight: 300;
+  font-family: Helvetica;
+}
+
+.headerOneMeet{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 0 40vw;
+  font-size: 7vw;
+  font-weight: 300;
+  font-family: Helvetica;
+  background-color: #FFFFFF;
+  width: 40vw;
+  color: #151515;
+  font-style: light;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23333' stroke-width='4' stroke-dasharray='30%2c 30' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.meetupHeader{
+  padding-top: 7vw;
+  padding-bottom: 10vw;
+}
+
+.buttonMoreDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7vw;
+  margin-left: 19vw;
+}
+
+#buttonMore{
+  height: 2.5vw;
+  width: 10vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2vw;
+  border: 0.1vw solid #151515;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.homeHeader{
+  padding-top: 7vw;
+  margin-bottom: 30vw;
+}
+
+.headerHomeOne, .headerHomeTwo, .headerHomeThree{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 8vw;
+  font-weight: 300;
+  font-family: Helvetica;
+  background-color: #F6F6F6;
+  color: #151515;
+  font-style: light;
+}
+
+.headerHomeTwo{
+  margin-right: 57vw;
+}
+
+.headerHomeOne{
+  margin-left: 14vw;
+}
+
+.underheadHomeText{
+  text-transform: uppercase;
+  font-size: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 55vw;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw; 
+  height: 25vw;
+  overflow: hidden; 
+}
+
+.vid{
+    -webkit-mask-image: url('../images/mask.png'); 
+    -webkit-mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url('../images/mask.png');
+    mask-repeat: no-repeat; 
+    mask-position: center; 
+}
+
+.placeVideo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4vw;
+  font-weight: 300;
+  font-family: Helvetica;
+  color: #151515;
+  font-style: light;
+}

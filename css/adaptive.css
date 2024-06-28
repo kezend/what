@@ -1,0 +1,45 @@
+@media (max-width: 414px) {
+  #page1, #page2, #page3, #page4, #page5, #page6, #page7, #page8{
+    width: 80%;
+    height: 60vw;
+    font-size: 4vw;
+    margin: 0.5rem 0;
+    gap: 1rem;
+  }
+
+  .buyingMagazine{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+  }
+
+  .arr{
+    display: none;
+  }
+  .fmText, .smText, .tmText{
+      text-align: center; 
+      margin: 0 auto;
+      width: auto;
+  }
+  .posters1 img, .posters2 img, .posters3 img{
+      width: 100%;
+      margin-top: 1vw;
+      position: static;
+      opacity: 1;
+  }
+  .buttonMoreDiv{
+    margin-left: 0vw;
+  }
+}
+  
+  @media (min-width: 1024px) {
+    .page:hover img{
+        opacity: 1;
+    }
+
+
+}
